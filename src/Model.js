@@ -7,7 +7,7 @@ export default function Model({ IsVisible, errorMessage = null }) {
           <h3 style={{ color: errorMessage ? "red" : "" }}>
             {errorMessage
               ? errorMessage
-              : "The Form has been submitted successfully"}
+              : "The Form has been submitted as successfully"}
           </h3>
         </div>
       </div>

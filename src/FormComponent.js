@@ -52,7 +52,7 @@ export default function FormComponent() {
           />
           <label>Phone number: </label>
           <input
-            type="text"
+            type="tel"
             value={FormValue.PhoneNumber}
             onChange={(event) => {
               SetFormValue({ ...FormValue, PhoneNumber: event.target.value });
