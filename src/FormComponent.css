@@ -1,0 +1,70 @@
+.form-card{
+    background-color: hsla(33, 78%, 91%, 0.431);
+    padding: 20px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #fff;
+    border-style: solid;
+
+
+}
+h2{
+margin-top: 0px;
+margin-bottom: 0px;
+    color: rgb(233, 212, 252);
+    font-family: "Cairo", sans-serif;
+}
+label{
+    display: block;
+    font-family: "Cairo", sans-serif;
+    font-weight: 400;
+    margin-bottom: -5px;
+    color: antiquewhite;
+    text-align: left;
+}
+input,select{
+    width: 100%;
+    height: 25px;
+    padding: 0px;
+    border-style: none;
+    font-family: "Cairo", sans-serif;
+}
+input:hover ,select :hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.employeeGroup{
+    display: flex;
+    flex-direction: row;
+}
+#checkbox{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 20px;
+
+}
+#checkbox:hover{
+    box-shadow:none
+}
+#submit-btn{
+    margin-top: 10px;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    border-style: none;
+    line-height: 0;
+    transition: 0.5s;
+    background: linear-gradient(90deg, #8402d53b 0%, #e3088b20 100%);
+    box-shadow: 0px 1px 12px 0px rgba(248, 248, 248, 0.263);
+    font-family: "Cairo", sans-serif;
+}
+#submit-btn:hover{
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    border-style: none;
+    line-height: 0;
+    transition: 0.5s;
+    background: linear-gradient(90deg, #8402d5 0%, #e3088b 100%);
+    box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.5);
+    font-family: "Cairo", sans-serif;
+}
