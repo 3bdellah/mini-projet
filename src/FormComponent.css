@@ -1,10 +1,11 @@
 .form-card{
-    background-color: hsla(33, 78%, 91%, 0.431);
+    background-color: hsla(0, 0%, 0%, 0.167);
     padding: 20px;
     height: auto;
+    width: 300PX;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px #fff;
-    border-style: solid;
+    box-shadow: 0px 0px 15px 0px #0000009f;
+    border-style: none;
 
 
 }
@@ -13,6 +14,9 @@ margin-top: 0px;
 margin-bottom: 0px;
     color: rgb(233, 212, 252);
     font-family: "Cairo", sans-serif;
+}
+hr{
+    border: 1px solid rgba(255, 255, 255, 0.186);
 }
 label{
     display: block;
@@ -53,7 +57,7 @@ input:hover ,select :hover{
     border-style: none;
     line-height: 0;
     transition: 0.5s;
-    background: linear-gradient(90deg, #8402d53b 0%, #e3088b20 100%);
+    background-color:rgba(240, 248, 255, 0) ;
     box-shadow: 0px 1px 12px 0px rgba(248, 248, 248, 0.263);
     font-family: "Cairo", sans-serif;
 }
