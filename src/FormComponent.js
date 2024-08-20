@@ -1,6 +1,8 @@
 import "./FormComponent.css";
 import Model from "./Model";
 import { useState } from "react";
+import MyComponent from "./MyComponent";
+import { inputContext } from "./context/formInputContext";
 
 export default function FormComponent() {
   const [showModel, SetShowModel] = useState(false);
@@ -31,6 +33,16 @@ export default function FormComponent() {
   function handelDivClick() {
     SetShowModel(false);
   }
+  function handelNameInput(value) {
+    SetFormValue({ ...FormValue, Name: value });
+  }
+  function handelAgeInput(value) {
+    SetFormValue({ ...FormValue, Age: value });
+  }
+  function handelPhoneNumberInput(value) {
+    SetFormValue({ ...FormValue, PhoneNumber: value });
+  }
+
   return (
     <>
       <div className="form-card">
@@ -42,6 +54,36 @@ export default function FormComponent() {
             HandelVerificationForm();
           }}
         >
+          {/* use useContext hoock :*/}
+          <inputContext.Provider
+            value={{
+              Label: "Name",
+              Value: FormValue.Name,
+              handelChange: handelNameInput,
+            }}
+          >
+            <MyComponent />
+          </inputContext.Provider>
+          <inputContext.Provider
+            value={{
+              Label: "Phone number",
+              Value: FormValue.PhoneNumber,
+              handelChange: handelPhoneNumberInput,
+            }}
+          >
+            <MyComponent />
+          </inputContext.Provider>
+          <inputContext.Provider
+            value={{
+              Label: "Age",
+              Value: FormValue.Age,
+              handelChange: handelAgeInput,
+            }}
+          >
+            <MyComponent />
+          </inputContext.Provider>
+
+          {/* 
           <label>Name: </label>
           <input
             type="text"
@@ -49,7 +91,7 @@ export default function FormComponent() {
             onChange={(event) => {
               SetFormValue({ ...FormValue, Name: event.target.value });
             }}
-          />
+          /> 
           <label>Phone number: </label>
           <input
             type="tel"
@@ -65,7 +107,7 @@ export default function FormComponent() {
             onChange={(event) => {
               SetFormValue({ ...FormValue, Age: event.target.value });
             }}
-          />
+          />*/}
           <div className="employeeGroup">
             <label>Are you an employee ? </label>
             <input
